@@ -1,0 +1,174 @@
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #180eaa; /* Fondo general */
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header */
+header {
+    background-color: #350452;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para modernizar */
+}
+
+header img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 40px;
+}
+
+header h1 {
+    margin: 0;
+    flex: 1;
+    font-size: 34px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fc097a; /* Color del texto principal */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.left-section {
+    flex: 2.5; /* Ajuste del ancho del contenedor de cartas */
+    background-color: #7111cc; /* Fondo para cartas */
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 5px solid #fc097a;
+}
+
+.right-section {
+    flex: 1.5; /* Ajustamos el ancho de la tabla y formulario */
+    background-color: rgba(53, 4, 82, 0.8); /* Fondo translúcido */
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Efecto translúcido */
+    display: flex;
+    flex-direction: column;
+    border-left: 5px solid #fc097a;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Game Board and Cards */
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.card {
+    width: calc(25% - 10px);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    cursor: pointer;
+    background-color: #350452; /* Fondo de las cartas */
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Efecto hover */
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(33.33% - 10px); /* 3 cartas por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 10px); /* 2 cartas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 10px); /* 1 carta por fila */
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        flex: none;
+    }
+}
+
+/* Score Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #7111cc; /* Fondo de la tabla */
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid #fc097a;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #350452; /* Fondo de encabezado */
+    color: #fc097a;
+}
+
+/* Form */
+.input-form form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px); /* Efecto translúcido */
+}
+
+input,
+button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input {
+    background-color: #180eaa;
+    border: 2px solid #7111cc;
+    color: white;
+}
+
+button {
+    background-color: #fc097a;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7111cc;
+}
