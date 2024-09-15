@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOWDOWN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logo.png" alt="Logo">
+            <h1>SHOWDOWN</h1>
+        </header>
+        <div class="main-content">
+            <div class="left-section">
+                <div class="game-board">
+                    <!-- Las cartas se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="score-table">
+                    <table>
+                        <!-- La tabla se actualizará dinámicamente -->
+                    </table>
+                </div>
+                <div class="input-form">
+                    <form>
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" name="numero" required>
+                        <label for="carta">Carta</label>
+                        <input type="text" id="carta" name="carta" required>
+                        <button type="submit">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Incluir el script aquí -->
+</body>
+</html>
